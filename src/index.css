@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #050708;
+}
+
+html,body,#root{height:100%;}
+body{background:radial-gradient( circle at 10% 10%, rgba(2,6,23,0.8), transparent 10%), radial-gradient(circle at 90% 80%, rgba(0,10,20,0.6), transparent 10%), var(--bg);}
+
+/* small utility for subtle cards */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
