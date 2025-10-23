@@ -74,7 +74,7 @@ export default function Hero() {
       {/* Right Section — Profile Image */}
   <div className="mx-auto w-52 h-60 card rounded-xl shadow-card flex items-center justify-center overflow-hidden">
   <img
-    src="/src/components/profilepic4.jpeg"
+    src="/profilepic4.jpeg"
     alt="Ashish Kumar"
     className="w-full h-full object-cover object-[center_35%] rounded-xl"
   />
