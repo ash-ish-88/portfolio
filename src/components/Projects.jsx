@@ -12,31 +12,31 @@ const projects = [
   },
   {
     title: "To Do List",
-    desc: "This project allows users to add, remove, and manage their daily tasks in an organized way. It demonstrates DOM manipulation, event handling, and dynamic content updating using JavaScript. The design is clean and responsive, offering a smooth user experience on both desktop and mobile devices.",
+    desc: "This project allows users to add, remove, and manage their daily tasks in an organized way. It demonstrates DOM manipulation, event handling, and dynamic content updating using JavaScript.",
     tags: ["HTML", "CSS", "JavaScript"],
     date: "Jul 10, 2025",
     link: "https://github.com/ash-ish-88/to-do-list",
     demo: "https://ash-ish-88.github.io/to-do-list/",
   },
   {
-    title: "Currency Convertor",
-    desc: "This is a currency converter web application that fetches real-time data for currency conversion rates using HTML, CSS, and JavaScript. The application allows users to convert currencies by selecting the source currency and the target currency, and it provides an interface to easily switch between the two selected values.",
+    title: "Currency Converter",
+    desc: "A currency converter web app that fetches real-time exchange rates using APIs. Built with HTML, CSS, and JavaScript, offering seamless currency switching and conversion.",
     tags: ["HTML", "CSS", "JavaScript"],
     date: "Nov 1, 2024",
     link: "https://github.com/ash-ish-88/Currency-converter",
     demo: "https://ash-ish-88.github.io/Currency-converter/",
   },
   {
-    title: "Quiz-App",
-    desc: "A lightweight and interactive Quiz App built using HTML, CSS, and JavaScript. This project is perfect for beginners looking to understand DOM manipulation, event handling, and basic UI design without using any libraries or frameworks.",
+    title: "Quiz App",
+    desc: "An interactive quiz platform built using HTML, CSS, and JavaScript. Showcases event handling, DOM updates, and real-time score tracking with smooth animations.",
     tags: ["HTML", "CSS", "JavaScript"],
     date: "Oct 25, 2024",
     link: "https://github.com/ash-ish-88/Quiz-App",
     demo: "https://ash-ish-88.github.io/Quiz-App/",
   },
   {
-    title: "Educational-web",
-    desc: "A fully responsive educational website built using HTML, CSS, and Tailwind CSS. This project features a modern layout inspired by learning platforms like PW Skills, including a navbar, hero section, student stats, product features, and footer.",
+    title: "Educational Web",
+    desc: "A responsive educational website inspired by PW Skills, featuring modern design with TailwindCSS and interactive UI components.",
     tags: ["HTML", "TailwindCSS"],
     date: "Oct 15, 2024",
     link: "https://github.com/ash-ish-88/educational-website",
@@ -45,22 +45,32 @@ const projects = [
 ];
 
 const ProjectCard = ({ project }) => (
-  <div className="bg-card p-6 rounded-2xl shadow-lg border border-gray-700 hover:border-primary transition-all hover:shadow-primary/10">
+  <div
+    className="relative group bg-gray-900/80 p-6 rounded-2xl border border-gray-800 
+               shadow-md hover:border-teal-400/60 hover:shadow-[0_0_20px_#14b8a6aa] 
+               transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm"
+  >
+    {/* Glow Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
     {/* Header */}
-    <div className="flex justify-between items-start">
-      <h3 className="text-lg font-semibold">{project.title}</h3>
-      <span className="text-xs text-primary font-medium">• {project.tags[0]}</span>
+    <div className="flex justify-between items-start relative z-10">
+      <h3 className="text-lg font-semibold text-gray-100">{project.title}</h3>
+      <span className="text-xs text-teal-400 font-medium">• {project.tags[0]}</span>
     </div>
 
     {/* Description */}
-    <p className="text-sm text-muted mt-2 leading-relaxed">{project.desc}</p>
+    <p className="text-sm text-gray-400 mt-3 leading-relaxed relative z-10">
+      {project.desc}
+    </p>
 
     {/* Tags */}
-    <div className="mt-4 flex flex-wrap gap-2">
+    <div className="mt-4 flex flex-wrap gap-2 relative z-10">
       {project.tags.map((tag) => (
         <span
           key={tag}
-          className="px-3 py-1 text-xs bg-muted/20 rounded-md border border-gray-700"
+          className="px-3 py-1 text-xs bg-gray-800/40 rounded-md border border-gray-700 
+                     hover:border-teal-400 hover:text-teal-300 transition-all"
         >
           {tag}
         </span>
@@ -68,40 +78,39 @@ const ProjectCard = ({ project }) => (
     </div>
 
     {/* Metadata */}
-    <div className="flex justify-between items-center text-xs text-muted mt-4">
+    <div className="flex justify-between items-center text-xs text-gray-500 mt-4 relative z-10">
       <div className="flex items-center gap-3">
         <span className="flex items-center gap-1">
-          <Star size={12} /> 0
+          <Star size={12} className="text-yellow-400" /> 0
         </span>
         <span className="flex items-center gap-1">
-          <Eye size={12} /> 0
+          <Eye size={12} className="text-cyan-400" /> 0
         </span>
         <span className="flex items-center gap-1">
-          <Calendar size={12} /> {project.date}
+          <Calendar size={12} className="text-gray-400" /> {project.date}
         </span>
       </div>
     </div>
 
     {/* Footer — Buttons */}
-    <div className="mt-5 flex justify-between gap-3">
-      {/* View Demo Button */}
+    <div className="mt-5 flex justify-between gap-3 relative z-10">
       {project.demo && (
         <a
           href={project.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 text-center border border-gray-700 rounded-md py-2 text-sm hover:bg-primary hover:text-black transition"
+          className="flex-1 text-center border border-gray-700 rounded-md py-2 text-sm 
+                     hover:bg-teal-400 hover:text-black font-medium transition"
         >
-          View
+          View Demo
         </a>
       )}
-
-      {/* Code Button with GitHub Icon */}
       <a
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex justify-center items-center gap-2 border border-gray-700 rounded-md py-2 text-sm hover:bg-primary hover:text-black transition"
+        className="flex-1 flex justify-center items-center gap-2 border border-gray-700 
+                   rounded-md py-2 text-sm hover:bg-teal-400 hover:text-black font-medium transition"
       >
         <Github size={14} /> Code
       </a>
@@ -113,30 +122,37 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-16 px-6 md:px-12 lg:px-20 bg-background text-foreground"
+      className="relative py-20 px-6 md:px-12 lg:px-20 
+                   text-gray-100 overflow-hidden"
     >
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold">Featured Projects</h2>
-        <p className="text-muted mt-3 max-w-2xl mx-auto">
-          Here are some of my recent projects that showcase my skills in
-          full-stack development, from concept to deployment.
+      {/* Background Glow */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-teal-500/10 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-400/10 blur-3xl rounded-full"></div>
+
+      <div className="text-center mb-14 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
+          Featured Projects
+        </h2>
+        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          Here are some of my latest web development projects built with a focus on design, functionality, and performance.
         </p>
       </div>
 
       {/* Projects Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
 
       {/* View All Projects Button */}
-      <div className="mt-12 flex justify-center">
+      <div className="mt-16 flex justify-center relative z-10">
         <a
           href="https://github.com/ash-ish-88?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2 border border-gray-700 rounded-md text-sm hover:bg-primary hover:text-black transition"
+          className="flex items-center gap-2 px-6 py-2 border border-gray-700 rounded-md text-sm 
+                     hover:bg-teal-400 hover:text-black font-medium transition"
         >
           <Github size={16} /> View All Projects on GitHub
         </a>
