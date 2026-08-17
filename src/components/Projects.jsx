@@ -3,6 +3,23 @@ import { Star, Eye, Calendar, Code, Github } from "lucide-react";
 
 const projects = [
   {
+  title: "Customer Data Migration and ETL Pipeline",
+  desc: "Designed and implemented ETL workflows to extract, transform, validate, and load customer data from source tables into target tables. Created staging tables, developed SQL queries and stored procedures, and optimized data processing in Amazon Redshift.",
+  tags: ["SQL", "ETL", "Amazon Redshift", "PostgreSQL"],
+  date: "Aug 2026",
+  link: "https://github.com/ash-ish-88",
+  demo: "",
+},
+
+{
+  title: "Customer Identity Resolution and Data Mapping",
+  desc: "Developed a customer identity resolution process using multiple matching rules based on customer attributes such as PAN, mobile number, passport number, voter ID, date of birth, and email ID. Implemented duplicate detection, customer data mapping, and data validation logic.",
+  tags: ["SQL", "Data Mapping", "Data Validation", "Amazon Redshift"],
+  date: "Jul 2026",
+  link: "https://github.com/ash-ish-88",
+  demo: "",
+},
+  {
     title: "ExploreBnB",
     desc: "ExploreBnB is a MERN stack web app inspired by Airbnb where users can explore rental listings, view them on a map, and share reviews. It focuses on exploration only—no booking or payments. Users can create accounts, log in, and discover unique places with a clean, responsive design.",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js"],
@@ -131,11 +148,10 @@ export default function Projects() {
 
       <div className="text-center mb-14 relative z-10">
         <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
-          Featured Projects
+        Projects
         </h2>
         <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-          Here are some of my latest web development projects built with a focus on design, functionality, and performance.
-        </p>
+       Here are some of my database and web development projects, showcasing my experience in SQL, ETL, data migration, Amazon Redshift, and full-stack development.        </p>
       </div>
 
       {/* Projects Grid */}

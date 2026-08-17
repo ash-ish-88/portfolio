@@ -15,10 +15,14 @@ export default function Footer() {
           <h3 className="text-2xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text">
             Ashish Kumar
           </h3>
+
           <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-            Full Stack Developer passionate about building exceptional digital
-            experiences with modern technologies.
+            Associate Engineering Analyst with hands-on experience in SQL, ETL,
+            Oracle, PostgreSQL, and Amazon Redshift. Passionate about database
+            development, data engineering, and building efficient data
+            solutions.
           </p>
+
           <div className="flex gap-5 mt-5">
             <a
               href="https://github.com/ash-ish-88"
@@ -28,6 +32,7 @@ export default function Footer() {
             >
               <Github size={18} />
             </a>
+
             <a
               href="https://www.linkedin.com/in/ashish-kumar-2c88/"
               target="_blank"
@@ -36,6 +41,7 @@ export default function Footer() {
             >
               <Linkedin size={18} />
             </a>
+
             <a
               href="mailto:ashishkkcse46@gmail.com"
               className="p-2 rounded-full bg-gray-800 hover:bg-cyan-500/10 border border-gray-700 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 transition-all duration-300"
@@ -47,7 +53,10 @@ export default function Footer() {
 
         {/* Column 2 - Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-100 mb-4">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-gray-100 mb-4">
+            Quick Links
+          </h3>
+
           <ul className="space-y-3 text-sm">
             <li>
               <a
@@ -57,6 +66,7 @@ export default function Footer() {
                 About
               </a>
             </li>
+
             <li>
               <a
                 href="#projects"
@@ -65,6 +75,7 @@ export default function Footer() {
                 Projects
               </a>
             </li>
+
             <li>
               <a
                 href="#contact"
@@ -81,8 +92,15 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-gray-100 mb-4">
             Get In Touch
           </h3>
-          <p className="text-sm text-gray-400 mb-1">Open to new opportunities</p>
-          <p className="text-sm text-gray-400 mb-3">Available for freelance projects</p>
+
+          <p className="text-sm text-gray-400 mb-1">
+            Open to database and data engineering opportunities
+          </p>
+
+          <p className="text-sm text-gray-400 mb-3">
+            Available for collaboration and professional opportunities
+          </p>
+
           <a
             href="mailto:ashishkkcse46@gmail.com"
             className="inline-block text-sm text-cyan-400 hover:text-cyan-300 transition duration-300"
@@ -99,8 +117,10 @@ export default function Footer() {
       <div className="relative text-center py-5 text-sm text-gray-500 z-10">
         <p>
           © {new Date().getFullYear()}{" "}
-          <span className="text-cyan-400 font-medium">Ashish Kumar</span>. All
-          rights reserved.
+          <span className="text-cyan-400 font-medium">
+            Ashish Kumar
+          </span>
+          . All rights reserved.
         </p>
       </div>
     </footer>

@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative grid grid-cols-1 md:grid-cols-3 gap-10 items-center py-20 px-6 
-                        bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
-      
+    <section
+      className="relative grid grid-cols-1 md:grid-cols-3 gap-10 items-center py-20 px-6
+                 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden"
+    >
       {/* Left Section */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
@@ -15,7 +16,7 @@ export default function Hero() {
         className="md:col-span-2"
       >
         <p className="text-teal-400 text-sm uppercase tracking-wide">
-          Available for opportunities
+          Open to Database and Data Engineering Opportunities
         </p>
 
         <h1 className="text-4xl md:text-5xl font-extrabold mt-4">
@@ -25,19 +26,26 @@ export default function Hero() {
           </span>
         </h1>
 
+        <h2 className="mt-3 text-2xl font-semibold text-gray-200">
+          Associate Engineering Analyst
+        </h2>
+
         <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-          I build exceptional digital experiences with modern technologies. <br />
-          Specializing in MERN stack and backend development to create <br />
-          scalable, user-focused applications.
+          I specialize in SQL, ETL, Oracle, PostgreSQL, and Amazon Redshift.
+          I have hands-on experience in data migration, data transformation,
+          stored procedures, data validation, query optimization, and customer
+          data mapping while working with large-scale datasets and real-world
+          business requirements.
         </p>
 
         {/* Buttons */}
         <div className="mt-6 flex flex-wrap gap-3 items-center">
           <a
-            href="/resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-teal-500 text-teal-400 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md
+                       border border-teal-500 text-teal-400
                        hover:bg-teal-500 hover:text-black transition"
           >
             <FaDownload /> View Resume
@@ -45,7 +53,8 @@ export default function Hero() {
 
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 transition"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-md
+                       bg-zinc-800 hover:bg-zinc-700 transition"
           >
             Contact Me
           </a>
@@ -59,14 +68,18 @@ export default function Hero() {
             href="https://github.com/ash-ish-88"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-teal-400 text-2xl transition transform hover:scale-125 hover:drop-shadow-[0_0_6px_#14b8a6]"
+            className="hover:text-teal-400 text-2xl transition
+                       transform hover:scale-125
+                       hover:drop-shadow-[0_0_6px_#14b8a6]"
           >
             <FaGithub />
           </a>
 
           <a
             href="mailto:ashishkkcse46@gmail.com"
-            className="hover:text-teal-400 text-2xl transition transform hover:scale-125 hover:drop-shadow-[0_0_6px_#14b8a6]"
+            className="hover:text-teal-400 text-2xl transition
+                       transform hover:scale-125
+                       hover:drop-shadow-[0_0_6px_#14b8a6]"
           >
             <FaEnvelope />
           </a>
@@ -75,18 +88,21 @@ export default function Hero() {
             href="https://www.linkedin.com/in/ashish-kumar-2c88/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-teal-400 text-2xl transition transform hover:scale-125 hover:drop-shadow-[0_0_6px_#14b8a6]"
+            className="hover:text-teal-400 text-2xl transition
+                       transform hover:scale-125
+                       hover:drop-shadow-[0_0_6px_#14b8a6]"
           >
             <FaLinkedin />
           </a>
         </div>
       </motion.div>
 
-      {/* Right Section — Profile Image */}
+      {/* Right Section */}
       <motion.div
-  animate={{ opacity: 1, x: 0 }}
-        className="mx-auto w-56 h-64 rounded-xl overflow-hidden border border-gray-700 
-                   shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+        animate={{ opacity: 1, x: 0 }}
+        className="mx-auto w-56 h-64 rounded-xl overflow-hidden border border-gray-700
+                   shadow-xl hover:-translate-y-2 hover:shadow-2xl
+                   transition-all duration-300"
       >
         <img
           src="/profilepic4.jpeg"
