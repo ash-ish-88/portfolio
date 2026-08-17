@@ -16,7 +16,7 @@ export default function Hero() {
         className="md:col-span-2"
       >
         <p className="text-teal-400 text-sm uppercase tracking-wide">
-          Associate Engineering Analyst | Database & ETL Developer
+          Associate Engineering Analyst
         </p>
 
         <h1 className="text-4xl md:text-5xl font-extrabold mt-4">
